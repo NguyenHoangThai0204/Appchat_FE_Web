@@ -120,15 +120,15 @@ const Chat = ({ idSelector, idLogin }) => {
   };
 
   const handleDeleteMessage = (message) => {
-    // Gọi API xóa tin nhắn và cập nhật state messages
+    // Gá»i API xÃ³a tin nháº¯n vÃ  cáº­p nháº­t state messages
   };
 
   const handleRecallMessage = (message) => {
-    // Gọi API thu hồi tin nhắn và cập nhật state messages
+    // Gá»i API thu há»“i tin nháº¯n vÃ  cáº­p nháº­t state messages
   };
 
   const handleForwardMessage = (message) => {
-    // Hiển thị giao diện chọn người nhận để chuyển tiếp tin nhắn
+    // Hiá»ƒn thá»‹ giao diá»‡n chá»n ngÆ°á»i nháº­n Ä‘á»ƒ chuyá»ƒn tiáº¿p tin nháº¯n
   };
 
   return (
@@ -170,7 +170,7 @@ const Chat = ({ idSelector, idLogin }) => {
                     <div>
                       <img
                         src={message.message}
-                        alt="ảnh"
+                        alt="áº£nh"
                         style={{
                           borderRadius: ".7em",
                           width: "150px",
@@ -207,14 +207,14 @@ const Chat = ({ idSelector, idLogin }) => {
                 {hoveredMessage === message && (
                   <MessageOptions>
                     <MessageOption onClick={() => handleDeleteMessage(message)}>
-                      Xóa
+                      XÃ³a
                     </MessageOption>
                     <MessageOption onClick={() => handleRecallMessage(
                       message)}>
-                      Thu hồi
+                      Thu há»“i
                     </MessageOption>
                     <MessageOption onClick={() => handleForwardMessage(message)}>
-                      Chuyển tiếp
+                      Chuyá»ƒn tiáº¿p
                     </MessageOption>
                   </MessageOptions>
                 )}
@@ -228,7 +228,7 @@ const Chat = ({ idSelector, idLogin }) => {
           </div>
         ))
       ) : (
-        <div>Hãy chat ngay, để hiểu hơn về nhau</div>
+        <div>HÃ£y chat ngay, Ä‘á»ƒ hiá»ƒu hÆ¡n vá» nhau</div>
       )}
     </div>
   );
