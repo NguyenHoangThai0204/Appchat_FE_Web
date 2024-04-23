@@ -104,16 +104,16 @@ const Chat = ({ idSelector, idLogin }) => {
     const fileExtension = filename.slice(filename.lastIndexOf(".")).toLowerCase();
     switch (fileExtension) {
       case ".pdf":
-        return <FaFilePdf style={{ height: 50, width: 70 }} />;
+        return <FaFilePdf style={{ height: 20, width: 40 , color: "orange" }} />;
       case ".doc":
       case ".docx":
-        return <FaFileWord style={{ height: 50, width: 70 }} />;
+        return <FaFileWord style={{ height: 20, width: 40 , color: "blue"}} />;
       case ".xls":
       case ".xlsx":
-        return <FaFileExcel style={{ height: 50, width: 70 }} />;
+        return <FaFileExcel style={{ height: 20, width: 40 , color: "green" }} />;
       case ".ppt":
       case ".pptx":
-        return <FaFilePowerpoint style={{ height: 50, width: 70 }} />;
+        return <FaFilePowerpoint style={{ height: 20, width: 40 , color: "brick " }} />;
       default:
         return <FaFile style={{ height: 50, width: 70 }} />;
     }
@@ -162,10 +162,10 @@ const Chat = ({ idSelector, idLogin }) => {
                       Your browser does not support the video tag.
                     </video>
                   ) : isFileExtensionAllowed(message.message) ? (
-                    <a href={message.message} target="_blank" rel="noreferrer">
-                      {getFileIcon(fileName(message.message))}{" "}
-                      {fileName(message.message)}
-                    </a>
+                    <FileLink href={message.message} target="_blank" rel="noreferrer">
+                      {getFileIcon(fileName(message.message))}
+                      <FileName>{fileName(message.message)}</FileName>
+                    </FileLink>
                   ) : (
                     <div>
                       <img
@@ -267,18 +267,27 @@ const MessageOptions = styled.div`
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 8px;
+  padding: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  top: -120px;
-  right: -10px;
+  top: -110px;
+  right: -50px;
 `;
 
 const MessageOption = styled.div`
   cursor: pointer;
-  padding: 4px 8px;
+  padding: 5px 8px;
 
   &:hover {
     background-color: #f0f0f0;
   }
+`;
+const FileLink = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+`;
+const FileName = styled.span`
+  margin-top: -10px; /* Di chuyển tên file lên phía trên */
 `;
