@@ -4,11 +4,10 @@ import styled from "styled-components";
 import io from "socket.io-client";
 import { extractTime } from "../extractTime/extractTime";
 import ModalImg from "./modalViewImage";
-<<<<<<< HEAD
-// hÃ¬nh áº£nh cá»§a file
-=======
+
+
 // hình ảnh của file
->>>>>>> b47a0ad4bfcaf4ffeb2f595b8cf8b1696916d026
+
 import { FaFilePdf, FaFileWord, FaFileExcel, FaFilePowerpoint, FaFile, FaEllipsisV } from 'react-icons/fa';
 
 const ChatListGroup = ({ groupId, idLogin }) => {
@@ -111,18 +110,8 @@ const ChatListGroup = ({ groupId, idLogin }) => {
   };
 
   const handleDeleteMessage = (message) => {
-<<<<<<< HEAD
-    console.log("XÃ³a tin nháº¯n:", message);
-  };
 
-  const handleRecallMessage = (message) => {
-    console.log("Thu há»“i tin nháº¯n:", message);
-  };
-
-  const handleForwardMessage = (message) => {
-    console.log("Chuyá»ƒn tiáº¿p tin nháº¯n:", message);
-=======
-    console.log("Xóa tin nhắn:", message);
+    console.log("Xóa tin nhắn", message);
   };
 
   const handleRecallMessage = (message) => {
@@ -131,7 +120,7 @@ const ChatListGroup = ({ groupId, idLogin }) => {
 
   const handleForwardMessage = (message) => {
     console.log("Chuyển tiếp tin nhắn:", message);
->>>>>>> b47a0ad4bfcaf4ffeb2f595b8cf8b1696916d026
+
   };
 
   const handleShowMenu = (message) => {
@@ -222,15 +211,11 @@ const ChatListGroup = ({ groupId, idLogin }) => {
                 <MessageMenu>
                   <FaEllipsisV />
                   <MenuOptions>
-<<<<<<< HEAD
-                    <MenuItem onClick={() => handleDeleteMessage(message)}>XÃ³a</MenuItem>
-                    <MenuItem onClick={() => handleRecallMessage(message)}>Thu há»“i</MenuItem>
-                    <MenuItem onClick={() => handleForwardMessage(message)}>Chuyá»ƒn tiáº¿p</MenuItem>
-=======
+
                     <MenuItem onClick={() => handleDeleteMessage(message)}>Xóa</MenuItem>
                     <MenuItem onClick={() => handleRecallMessage(message)}>Thu hồi</MenuItem>
                     <MenuItem onClick={() => handleForwardMessage(message)}>Chuyển tiếp</MenuItem>
->>>>>>> b47a0ad4bfcaf4ffeb2f595b8cf8b1696916d026
+
                   </MenuOptions>
                 </MessageMenu>
               )}
@@ -240,7 +225,7 @@ const ChatListGroup = ({ groupId, idLogin }) => {
           </div>
         ))
       ) : (
-        <div>HÃ£y chat ngay, Ä‘á»ƒ hiá»ƒu hÆ¡n vá» nhau </div>
+        <div>Hãy chat ngay , để hiểu nhau hơn </div>
       )}
     </div>
   );
